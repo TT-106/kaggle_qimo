@@ -1,0 +1,13 @@
+[shared]
+root = "S:/coding_relative/kaggle/name-that-llm-local"
+cpu_python = ".venv/Scripts/python.exe"
+gpu_python = ".venv-gpu/Scripts/python.exe"
+official_train = "data/official/train.csv"
+official_test_preview = "data/official/test.csv"
+submission_example = "data/official/sample_submission.parquet"
+qwen_embedding = "models/qwen3-embedding-0.6b"
+
+[evaluation]
+id = "prompt-group-5fold-v1"
+folds = 5
+classes = 18

@@ -1,0 +1,136 @@
+{
+  "protocol_id": "open-pool-prompt-group-5fold-v1",
+  "input_kind": "open_pool",
+  "source_relative_path": "data/external/ntl_open_pool.parquet",
+  "source_train": "S:\\coding_relative\\kaggle_handed\\data\\external\\ntl_open_pool.parquet",
+  "target_labels": "publisher model column",
+  "train_sha256": "7b1e500ad6512caecc64f6e512d1189a6813448386ee2476398683f6a1ddf492",
+  "folds_sha256": "e3058383d30a11140532bff0316858f591b79c3c37aff8ed6b8e4660c7d3e041",
+  "n_splits": 5,
+  "splitter": "StratifiedGroupKFold",
+  "seed": 42,
+  "shuffle": true,
+  "group_column": "prompt_id",
+  "group_method": "connected components of original and canonical prompt IDs",
+  "primary_metric": "balanced_accuracy",
+  "label_order": [
+    "claude-fable-5",
+    "claude-opus-4-6",
+    "claude-opus-4-8",
+    "claude-opus-5",
+    "claude-sonnet-5",
+    "gemini-3.1-pro-preview",
+    "gemini-3.6-flash",
+    "gemini-3.7-flash",
+    "gemini-3.8-flash",
+    "glm-5.3",
+    "glm-5.3-flash",
+    "gpt-5.5",
+    "gpt-5.6-luna",
+    "gpt-5.6-sol",
+    "gpt-5.6-terra",
+    "gpt-6-astra",
+    "kimi-k3",
+    "qwen3.8-max"
+  ],
+  "rows": 97050,
+  "prompts": 12794,
+  "largest_prompt_component_rows": 3414,
+  "class_counts": {
+    "claude-fable-5": 8493,
+    "gemini-3.8-flash": 7776,
+    "glm-5.3-flash": 6430,
+    "glm-5.3": 6263,
+    "claude-opus-4-8": 5965,
+    "gpt-5.6-sol": 5831,
+    "kimi-k3": 5812,
+    "gpt-5.6-terra": 5738,
+    "claude-sonnet-5": 5691,
+    "gpt-5.6-luna": 5535,
+    "gpt-5.5": 5452,
+    "claude-opus-4-6": 5230,
+    "gpt-6-astra": 5142,
+    "gemini-3.6-flash": 4806,
+    "claude-opus-5": 4084,
+    "qwen3.8-max": 3497,
+    "gemini-3.7-flash": 3111,
+    "gemini-3.1-pro-preview": 2194
+  },
+  "fold_checks": [
+    {
+      "fold": 1,
+      "train_rows": 75266,
+      "validation_rows": 21784,
+      "train_prompts": 10303,
+      "validation_prompts": 2491,
+      "validation_classes": 18,
+      "shared_prompts": 0
+    },
+    {
+      "fold": 2,
+      "train_rows": 78045,
+      "validation_rows": 19005,
+      "train_prompts": 10285,
+      "validation_prompts": 2509,
+      "validation_classes": 18,
+      "shared_prompts": 0
+    },
+    {
+      "fold": 3,
+      "train_rows": 78222,
+      "validation_rows": 18828,
+      "train_prompts": 10294,
+      "validation_prompts": 2500,
+      "validation_classes": 18,
+      "shared_prompts": 0
+    },
+    {
+      "fold": 4,
+      "train_rows": 78335,
+      "validation_rows": 18715,
+      "train_prompts": 10144,
+      "validation_prompts": 2650,
+      "validation_classes": 18,
+      "shared_prompts": 0
+    },
+    {
+      "fold": 5,
+      "train_rows": 78332,
+      "validation_rows": 18718,
+      "train_prompts": 10150,
+      "validation_prompts": 2644,
+      "validation_classes": 18,
+      "shared_prompts": 0
+    }
+  ],
+  "original_prompt_ids_in_multiple_folds": {
+    "prompt_group": 0,
+    "prompt_canon": 0
+  },
+  "cohort": {
+    "raw_rows": 231036,
+    "retained_after_prompt_ids": 225110,
+    "retained_after_risk_flags": 138483,
+    "retained_after_prompt_evidence": 97050,
+    "required_prompt_evidence": [
+      "own_bank",
+      "own_text"
+    ],
+    "rejected_risk_flag_columns": [
+      "flag_kb_proxy",
+      "flag_gemini37_routing_risk",
+      "flag_near_train_prompt",
+      "flag_train_prompt_regen",
+      "flag_kb_proxy_after_ruling"
+    ],
+    "selected_sources": 17,
+    "selected_raw_prompt_ids": 14834,
+    "selected_canonical_prompt_ids": 15214,
+    "selected_missing_served_model": 64407
+  },
+  "environment": {
+    "python": "3.11.15",
+    "pandas": "3.1.1",
+    "scikit_learn": "1.9.1"
+  }
+}

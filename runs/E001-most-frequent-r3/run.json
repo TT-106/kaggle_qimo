@@ -1,0 +1,146 @@
+{
+  "id": "E001-most-frequent-r3",
+  "kind": "grouped_oof",
+  "status": "completed",
+  "baseline_run": null,
+  "protocol_id": "prompt-group-5fold-v1",
+  "train_sha256": "40a22ce8d88c5f46feb4637a099db815bef5f713ffe53e89dbe1b7b21de77707",
+  "folds_sha256": "9e5e0f3db0a359bf314f904862a22d70db92b27c1d91eeb414d8b554e3556af7",
+  "train_file": "S:\\coding_relative\\kaggle\\name-that-llm-local\\data\\official\\train.csv",
+  "started_at_utc": "2026-11-24T06:10:22+00:00",
+  "command": [
+    "S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    ".\\src\\run_traditional.py",
+    "E001-most-frequent-r3"
+  ],
+  "working_directory": "S:\\coding_relative\\kaggle_handed",
+  "question": "固定五折和 18 类 BA 能否复现多数类常量预测的理论值？",
+  "config": {
+    "experiment": {
+      "retry_of": "E001-most-frequent-r2",
+      "title": "常量预测",
+      "features": "constant",
+      "classifier": "dummy",
+      "question": "固定五折和 18 类 BA 能否复现多数类常量预测的理论值？"
+    },
+    "vectorizer": {},
+    "estimator": {
+      "strategy": "most_frequent"
+    },
+    "cpu_threads": 4,
+    "style_columns": []
+  },
+  "label_order": [
+    "claude-fable-5",
+    "claude-opus-4-6",
+    "claude-opus-4-8",
+    "claude-opus-5",
+    "claude-sonnet-5",
+    "gemini-3.1-pro-preview",
+    "gemini-3.6-flash",
+    "gemini-3.7-flash",
+    "gemini-3.8-flash",
+    "glm-5.3",
+    "glm-5.3-flash",
+    "gpt-5.5",
+    "gpt-5.6-luna",
+    "gpt-5.6-sol",
+    "gpt-5.6-terra",
+    "gpt-6-astra",
+    "kimi-k3",
+    "qwen3.8-max"
+  ],
+  "decision_rule": "probability argmax, first label in frozen order if tied",
+  "environment": {
+    "python": "3.11.15",
+    "executable": "S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv\\Scripts\\python.exe",
+    "packages": {
+      "numpy": "2.4.6",
+      "pandas": "3.1.1",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.9.1",
+      "pyarrow": "26.0.1",
+      "threadpoolctl": "3.8.0"
+    },
+    "plot_python": "S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv-gpu\\Scripts\\python.exe",
+    "device": "cpu",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD"
+  },
+  "source_sha256": {
+    "src\\run_traditional.py": "57fff49eee6d4a9e320a2a5f2d46d52360393622e84c597c4c24cd61c3ee7c9a",
+    "src\\prepare_data.py": "06a5f1104578e427d130b2600b124d7cd805cb2f992497c0e4589bec1b5f3f16",
+    "src\\check_run.py": "163c15bc7998f218fb0292c60932aa468776b149e0b727e030d623539f807e12",
+    "src\\plot_confusion.py": "4665b24e8eb44f6bda17fddb02d08d040a04e9b672d99f85d0b21ff9280f2036",
+    "configs\\traditional_baselines.toml": "da39f45837ea27db125d610576c01e1cc7e8af98272d609a761883c43e984715"
+  },
+  "compute_seconds": 0.015333799999552866,
+  "fold_runtime": [
+    {
+      "fold": 1,
+      "training_rows": 2159,
+      "validation_rows": 540,
+      "feature_columns": 1,
+      "feature_seconds": 0.00010309999993296515,
+      "fit_seconds": 0.012691300000142292,
+      "predict_seconds": 8.350000007339986e-05,
+      "warnings": [],
+      "sparse_nonzero_values": null,
+      "iterations": null
+    },
+    {
+      "fold": 2,
+      "training_rows": 2159,
+      "validation_rows": 540,
+      "feature_columns": 1,
+      "feature_seconds": 0.0001059999999597494,
+      "fit_seconds": 0.00041999999984909664,
+      "predict_seconds": 4.330000001573353e-05,
+      "warnings": [],
+      "sparse_nonzero_values": null,
+      "iterations": null
+    },
+    {
+      "fold": 3,
+      "training_rows": 2159,
+      "validation_rows": 540,
+      "feature_columns": 1,
+      "feature_seconds": 0.0001250999998774205,
+      "fit_seconds": 0.0006346999998640968,
+      "predict_seconds": 5.3600000001097214e-05,
+      "warnings": [],
+      "sparse_nonzero_values": null,
+      "iterations": null
+    },
+    {
+      "fold": 4,
+      "training_rows": 2159,
+      "validation_rows": 540,
+      "feature_columns": 1,
+      "feature_seconds": 0.00011399999993955134,
+      "fit_seconds": 0.0003985999999258638,
+      "predict_seconds": 4.239999998389976e-05,
+      "warnings": [],
+      "sparse_nonzero_values": null,
+      "iterations": null
+    },
+    {
+      "fold": 5,
+      "training_rows": 2160,
+      "validation_rows": 539,
+      "feature_columns": 1,
+      "feature_seconds": 0.0001159000000825472,
+      "fit_seconds": 0.00036449999993237725,
+      "predict_seconds": 3.779999997277628e-05,
+      "warnings": [],
+      "sparse_nonzero_values": null,
+      "iterations": null
+    }
+  ],
+  "exit_code": 0,
+  "verified_oof_rows": 2699,
+  "ended_at_utc": "2026-11-24T06:10:24+00:00",
+  "elapsed_seconds": 2.9121006000000307
+}

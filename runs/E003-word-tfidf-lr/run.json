@@ -1,0 +1,176 @@
+{
+  "id": "E003-word-tfidf-lr",
+  "kind": "grouped_oof",
+  "status": "completed",
+  "baseline_run": "E002-style-lr",
+  "protocol_id": "prompt-group-5fold-v1",
+  "train_sha256": "40a22ce8d88c5f46feb4637a099db815bef5f713ffe53e89dbe1b7b21de77707",
+  "folds_sha256": "9e5e0f3db0a359bf314f904862a22d70db92b27c1d91eeb414d8b554e3556af7",
+  "train_file": "S:\\coding_relative\\kaggle\\name-that-llm-local\\data\\official\\train.csv",
+  "started_at_utc": "2026-11-24T06:10:37+00:00",
+  "command": [
+    "S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    ".\\src\\run_traditional.py",
+    "E003-word-tfidf-lr"
+  ],
+  "working_directory": "S:\\coding_relative\\kaggle_handed",
+  "question": "同一分类器改用词与短语频率之后，整体效果和错误结构怎样变化？",
+  "config": {
+    "experiment": {
+      "title": "词级 TF-IDF + 逻辑回归",
+      "features": "word",
+      "classifier": "logistic",
+      "baseline": "E002-style-lr",
+      "question": "同一分类器改用词与短语频率之后，整体效果和错误结构怎样变化？"
+    },
+    "vectorizer": {
+      "min_df": 2,
+      "max_df": 1.0,
+      "lowercase": false,
+      "use_idf": true,
+      "smooth_idf": true,
+      "sublinear_tf": true,
+      "norm": "l2",
+      "analyzer": "word",
+      "ngram_range": [
+        1,
+        2
+      ],
+      "max_features": 25000,
+      "token_pattern": "(?u)\\b\\w+\\b"
+    },
+    "estimator": {
+      "solver": "lbfgs",
+      "l1_ratio": 0.0,
+      "C": 2.0,
+      "max_iter": 2000,
+      "tol": 0.0001,
+      "class_weight": null
+    },
+    "cpu_threads": 4,
+    "style_columns": []
+  },
+  "label_order": [
+    "claude-fable-5",
+    "claude-opus-4-6",
+    "claude-opus-4-8",
+    "claude-opus-5",
+    "claude-sonnet-5",
+    "gemini-3.1-pro-preview",
+    "gemini-3.6-flash",
+    "gemini-3.7-flash",
+    "gemini-3.8-flash",
+    "glm-5.3",
+    "glm-5.3-flash",
+    "gpt-5.5",
+    "gpt-5.6-luna",
+    "gpt-5.6-sol",
+    "gpt-5.6-terra",
+    "gpt-6-astra",
+    "kimi-k3",
+    "qwen3.8-max"
+  ],
+  "decision_rule": "probability argmax, first label in frozen order if tied",
+  "environment": {
+    "python": "3.11.15",
+    "executable": "S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv\\Scripts\\python.exe",
+    "packages": {
+      "numpy": "2.4.6",
+      "pandas": "3.1.1",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.9.1",
+      "pyarrow": "26.0.1",
+      "threadpoolctl": "3.8.0"
+    },
+    "plot_python": "S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv-gpu\\Scripts\\python.exe",
+    "device": "cpu",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD"
+  },
+  "source_sha256": {
+    "src\\run_traditional.py": "57fff49eee6d4a9e320a2a5f2d46d52360393622e84c597c4c24cd61c3ee7c9a",
+    "src\\prepare_data.py": "06a5f1104578e427d130b2600b124d7cd805cb2f992497c0e4589bec1b5f3f16",
+    "src\\check_run.py": "163c15bc7998f218fb0292c60932aa468776b149e0b727e030d623539f807e12",
+    "src\\plot_confusion.py": "4665b24e8eb44f6bda17fddb02d08d040a04e9b672d99f85d0b21ff9280f2036",
+    "configs\\traditional_baselines.toml": "da39f45837ea27db125d610576c01e1cc7e8af98272d609a761883c43e984715"
+  },
+  "compute_seconds": 9.052813100000549,
+  "fold_runtime": [
+    {
+      "fold": 1,
+      "training_rows": 2159,
+      "validation_rows": 540,
+      "feature_columns": 25000,
+      "feature_seconds": 1.0141128000000208,
+      "fit_seconds": 0.5296570000000429,
+      "predict_seconds": 0.0017147999999451713,
+      "warnings": [],
+      "sparse_nonzero_values": 289790,
+      "iterations": [
+        10
+      ]
+    },
+    {
+      "fold": 2,
+      "training_rows": 2159,
+      "validation_rows": 540,
+      "feature_columns": 25000,
+      "feature_seconds": 0.9735633000000234,
+      "fit_seconds": 0.9244504000000688,
+      "predict_seconds": 0.001699200000075507,
+      "warnings": [],
+      "sparse_nonzero_values": 288585,
+      "iterations": [
+        17
+      ]
+    },
+    {
+      "fold": 3,
+      "training_rows": 2159,
+      "validation_rows": 540,
+      "feature_columns": 25000,
+      "feature_seconds": 0.9995123999999578,
+      "fit_seconds": 0.8889932000001863,
+      "predict_seconds": 0.0018596999998408137,
+      "warnings": [],
+      "sparse_nonzero_values": 290759,
+      "iterations": [
+        16
+      ]
+    },
+    {
+      "fold": 4,
+      "training_rows": 2159,
+      "validation_rows": 540,
+      "feature_columns": 25000,
+      "feature_seconds": 1.0023066999999628,
+      "fit_seconds": 0.8542028000001665,
+      "predict_seconds": 0.0019294000001082168,
+      "warnings": [],
+      "sparse_nonzero_values": 290119,
+      "iterations": [
+        16
+      ]
+    },
+    {
+      "fold": 5,
+      "training_rows": 2160,
+      "validation_rows": 539,
+      "feature_columns": 25000,
+      "feature_seconds": 1.0116536000000451,
+      "fit_seconds": 0.8446303000000626,
+      "predict_seconds": 0.0025275000000419823,
+      "warnings": [],
+      "sparse_nonzero_values": 287799,
+      "iterations": [
+        16
+      ]
+    }
+  ],
+  "exit_code": 0,
+  "verified_oof_rows": 2699,
+  "ended_at_utc": "2026-11-24T06:10:49+00:00",
+  "elapsed_seconds": 12.109099499999957
+}

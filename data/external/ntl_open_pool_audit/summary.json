@@ -1,0 +1,126 @@
+{
+  "pool_file": "S:\\coding_relative\\kaggle_handed\\data\\external\\ntl_open_pool.parquet",
+  "pool_sha256": "7b1e500ad6512caecc64f6e512d1189a6813448386ee2476398683f6a1ddf492",
+  "bytes": 115325974,
+  "publisher": "https://www.kaggle.com/datasets/crtproduction/name-that-llm-open-pool",
+  "official_data": {
+    "path": "S:\\coding_relative\\kaggle\\name-that-llm-local\\data\\official\\train.csv",
+    "sha256": "40a22ce8d88c5f46feb4637a099db815bef5f713ffe53e89dbe1b7b21de77707",
+    "folds_sha256": "9e5e0f3db0a359bf314f904862a22d70db92b27c1d91eeb414d8b554e3556af7",
+    "protocol_id": "prompt-group-5fold-v1"
+  },
+  "rows": 231036,
+  "columns": 30,
+  "primary_sources": 66,
+  "source_files_distinct_source_and_file": 109,
+  "labels": 18,
+  "label_order": [
+    "claude-fable-5",
+    "claude-opus-4-6",
+    "claude-opus-4-8",
+    "claude-opus-5",
+    "claude-sonnet-5",
+    "gemini-3.1-pro-preview",
+    "gemini-3.6-flash",
+    "gemini-3.7-flash",
+    "gemini-3.8-flash",
+    "glm-5.3",
+    "glm-5.3-flash",
+    "gpt-5.5",
+    "gpt-5.6-luna",
+    "gpt-5.6-sol",
+    "gpt-5.6-terra",
+    "gpt-6-astra",
+    "kimi-k3",
+    "qwen3.8-max"
+  ],
+  "quality": {
+    "id_duplicate_rows": 0,
+    "blank_text_rows": 0,
+    "raw_duplicate_rows": 0,
+    "normalized_duplicate_rows": 0,
+    "normalized_duplicate_extra_rows": 0,
+    "normalized_cross_label_hashes": 0,
+    "claimed_multi_source_rows": 126822,
+    "stored_word_count_mismatch_rows": 0
+  },
+  "prompt_groups": {
+    "raw_count": 53727,
+    "canonical_groups": 36068,
+    "unresolved_rows": 5926,
+    "canonical_multi_source_groups": 5979,
+    "canonical_labels": {
+      "1": 10729,
+      "2": 7939,
+      "3": 3308,
+      "4": 2422,
+      "5": 1963,
+      "6": 473,
+      "7": 368,
+      "8": 729,
+      "9": 1482,
+      "10": 512,
+      "11": 782,
+      "12": 892,
+      "13": 595,
+      "14": 458,
+      "15": 483,
+      "16": 877,
+      "17": 1338,
+      "18": 718
+    },
+    "stored_panel_label_count_mismatches": 0,
+    "literal_official_id_overlap_rows": 0,
+    "evidence": {
+      "own_bank": 75924,
+      "own_text": 65109,
+      "id_only": 42717,
+      "other_text": 27191,
+      "centroid": 14169,
+      "none": 5926
+    }
+  },
+  "provenance": {
+    "source_license_rows": {
+      "Attribution 4.0 International (CC BY 4.0)": 172806,
+      "CC-BY-SA-4.0": 31062,
+      "CC BY 4.0 (stated in the dataset README; Kaggle licence field unset)": 17507,
+      "CC0-1.0": 9661
+    },
+    "served_model_missing_rows": 145566,
+    "route_missing_rows": 154908,
+    "date_missing_rows": 197433,
+    "served_short_name_matches_rows": 66311,
+    "served_is_another_official_label_rows": 0,
+    "served_other_name_rows": 19159,
+    "flag_true_rows": {
+      "flag_kb_proxy": 87963,
+      "flag_kb_proxy_after_ruling": 21154,
+      "flag_gemini37_routing_risk": 0,
+      "flag_near_train_prompt": 0,
+      "flag_train_prompt_regen": 0
+    },
+    "proxy_flag_without_after_ruling_flag_rows": 66809,
+    "reasoning_evidence_rows": {
+      "row": 109545,
+      "unknown": 101876,
+      "source_docs": 19615
+    },
+    "metadata_screen_rows": 28985
+  },
+  "official_overlap": {
+    "pairs": 0,
+    "matched_pool_rows": 0,
+    "matched_official_articles": 0,
+    "id_pairs": 0,
+    "by_relation_rows": {},
+    "shingle_size": 5,
+    "min_jaccard": 0.8,
+    "min_containment": 0.9,
+    "min_shared_for_containment": 30
+  },
+  "environment": {
+    "pandas": "3.1.1",
+    "pyarrow": "26.0.1"
+  }
+}

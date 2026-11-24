@@ -1,0 +1,12 @@
+E001-most-frequent  常量预测  prompt-group-5fold-v1
+命令 ["C:\\Users\\35458\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\python.exe", "-X", "utf8", "-B", ".\\src\\run_traditional.py", "E001-most-frequent"]
+第 1 折  BA 0.055556  特征 1 列  构建 0.00s  拟合 0.01s  预测 0.00s
+第 2 折  BA 0.055556  特征 1 列  构建 0.00s  拟合 0.00s  预测 0.00s
+第 3 折  BA 0.055556  特征 1 列  构建 0.00s  拟合 0.00s  预测 0.00s
+第 4 折  BA 0.055556  特征 1 列  构建 0.00s  拟合 0.00s  预测 0.00s
+第 5 折  BA 0.055556  特征 1 列  构建 0.00s  拟合 0.00s  预测 0.00s
+实验中止
+Traceback (most recent call last):
+  File "S:\coding_relative\kaggle_handed\src\run_traditional.py", line 317, in run_experiment
+    raise ValueError("常量预测未复现 18 类理论 BA。")
+ValueError: 常量预测未复现 18 类理论 BA。

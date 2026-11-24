@@ -1,0 +1,9 @@
+E003-word-tfidf-lr  词级 TF-IDF + 逻辑回归  prompt-group-5fold-v1
+命令 ["S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv\\Scripts\\python.exe", "-X", "utf8", "-B", ".\\src\\run_traditional.py", "E003-word-tfidf-lr"]
+第 1 折  BA 0.262963  特征 25000 列  构建 1.01s  拟合 0.53s  预测 0.00s
+第 2 折  BA 0.268519  特征 25000 列  构建 0.97s  拟合 0.92s  预测 0.00s
+第 3 折  BA 0.298148  特征 25000 列  构建 1.00s  拟合 0.89s  预测 0.00s
+第 4 折  BA 0.275926  特征 25000 列  构建 1.00s  拟合 0.85s  预测 0.00s
+第 5 折  BA 0.281609  特征 25000 列  构建 1.01s  拟合 0.84s  预测 0.00s
+S:\coding_relative\kaggle_handed\runs\E003-word-tfidf-lr\figures\confusion.png
+E003-word-tfidf-lr 已通过归档核验  BA 0.277427  Macro-F1 0.262883  2699 条折外预测

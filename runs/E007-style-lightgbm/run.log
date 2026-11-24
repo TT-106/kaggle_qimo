@@ -1,0 +1,9 @@
+E007-style-lightgbm  统计风格 + LightGBM  prompt-group-5fold-v1
+命令 ["S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv\\Scripts\\python.exe", "-X", "utf8", "-B", ".\\src\\run_traditional.py", "E007-style-lightgbm"]
+第 1 折  BA 0.264815  特征 20 列  构建 0.40s  拟合 1.25s  预测 0.05s
+第 2 折  BA 0.218519  特征 20 列  构建 0.40s  拟合 1.22s  预测 0.05s
+第 3 折  BA 0.259259  特征 20 列  构建 0.36s  拟合 1.22s  预测 0.05s
+第 4 折  BA 0.261111  特征 20 列  构建 0.35s  拟合 1.19s  预测 0.05s
+第 5 折  BA 0.241060  特征 20 列  构建 0.40s  拟合 1.13s  预测 0.05s
+S:\coding_relative\kaggle_handed\runs\E007-style-lightgbm\figures\confusion.png
+E007-style-lightgbm 已通过归档核验  BA 0.248944  Macro-F1 0.245059  2699 条折外预测

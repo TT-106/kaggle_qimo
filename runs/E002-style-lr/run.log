@@ -1,0 +1,9 @@
+E002-style-lr  统计风格 + 逻辑回归  prompt-group-5fold-v1
+命令 ["S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv\\Scripts\\python.exe", "-X", "utf8", "-B", ".\\src\\run_traditional.py", "E002-style-lr"]
+第 1 折  BA 0.268519  特征 20 列  构建 0.38s  拟合 0.09s  预测 0.00s
+第 2 折  BA 0.281481  特征 20 列  构建 0.39s  拟合 0.08s  预测 0.00s
+第 3 折  BA 0.281481  特征 20 列  构建 0.40s  拟合 0.08s  预测 0.00s
+第 4 折  BA 0.300000  特征 20 列  构建 0.41s  拟合 0.07s  预测 0.00s
+第 5 折  BA 0.281609  特征 20 列  构建 0.37s  拟合 0.08s  预测 0.00s
+S:\coding_relative\kaggle_handed\runs\E002-style-lr\figures\confusion.png
+E002-style-lr 已通过归档核验  BA 0.282632  Macro-F1 0.267212  2699 条折外预测

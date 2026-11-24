@@ -1,0 +1,13 @@
+[evaluation]
+id = "open-pool-prompt-group-5fold-v1"
+shared_style_features = true
+shared_char_counts = true
+
+[runs.E011-open-pool-char-style-lightgbm]
+title = "字符 TF-IDF + 统计风格 + LightGBM"
+features = "char_style"
+classifier = "lightgbm"
+baseline = "E010-open-pool-style-lightgbm"
+chi2_char_features = 2048
+lightgbm_progress_every = 50
+question = "保持 E010 的分折、原始 20 项统计特征和 LightGBM 参数，增加训练侧筛选的字符 TF-IDF 能提升多少？"

@@ -1,0 +1,23 @@
+[evaluation]
+id = "open-pool-prompt-group-5fold-v1"
+shared_style_features = true
+
+[runs.E008-open-pool-style-lr]
+title = "统计风格 + 逻辑回归"
+features = "style"
+classifier = "logistic"
+question = "在外部 Open Pool 自身的按题五折中，20 项统计特征与逻辑回归的基准分数是多少？"
+
+[runs.E009-open-pool-style-xgboost]
+title = "统计风格 + XGBoost"
+features = "style"
+classifier = "xgboost"
+baseline = "E008-open-pool-style-lr"
+question = "使用同一份外部语料、分折和统计特征，换成 XGBoost 后效果如何？"
+
+[runs.E010-open-pool-style-lightgbm]
+title = "统计风格 + LightGBM"
+features = "style"
+classifier = "lightgbm"
+baseline = "E008-open-pool-style-lr"
+question = "使用同一份外部语料、分折和统计特征，换成 LightGBM 后效果如何？"

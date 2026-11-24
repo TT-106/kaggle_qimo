@@ -1,0 +1,145 @@
+{
+  "id": "E001-most-frequent",
+  "kind": "grouped_oof",
+  "status": "failed",
+  "baseline_run": null,
+  "protocol_id": "prompt-group-5fold-v1",
+  "train_sha256": "40a22ce8d88c5f46feb4637a099db815bef5f713ffe53e89dbe1b7b21de77707",
+  "folds_sha256": "9e5e0f3db0a359bf314f904862a22d70db92b27c1d91eeb414d8b554e3556af7",
+  "train_file": "S:\\coding_relative\\kaggle\\name-that-llm-local\\data\\official\\train.csv",
+  "started_at_utc": "2026-11-24T06:06:49+00:00",
+  "command": [
+    "C:\\Users\\35458\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    ".\\src\\run_traditional.py",
+    "E001-most-frequent"
+  ],
+  "working_directory": "S:\\coding_relative\\kaggle_handed",
+  "question": "固定五折和 18 类 BA 能否复现多数类常量预测的理论值？",
+  "config": {
+    "experiment": {
+      "title": "常量预测",
+      "features": "constant",
+      "classifier": "dummy",
+      "question": "固定五折和 18 类 BA 能否复现多数类常量预测的理论值？"
+    },
+    "vectorizer": {},
+    "estimator": {
+      "strategy": "most_frequent"
+    },
+    "cpu_threads": 4,
+    "style_columns": []
+  },
+  "label_order": [
+    "claude-fable-5",
+    "claude-opus-4-6",
+    "claude-opus-4-8",
+    "claude-opus-5",
+    "claude-sonnet-5",
+    "gemini-3.1-pro-preview",
+    "gemini-3.6-flash",
+    "gemini-3.7-flash",
+    "gemini-3.8-flash",
+    "glm-5.3",
+    "glm-5.3-flash",
+    "gpt-5.5",
+    "gpt-5.6-luna",
+    "gpt-5.6-sol",
+    "gpt-5.6-terra",
+    "gpt-6-astra",
+    "kimi-k3",
+    "qwen3.8-max"
+  ],
+  "decision_rule": "probability argmax, first label in frozen order if tied",
+  "environment": {
+    "python": "3.11.15",
+    "executable": "S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv\\Scripts\\python.exe",
+    "packages": {
+      "numpy": "2.4.6",
+      "pandas": "3.1.1",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.9.1",
+      "pyarrow": "26.0.1",
+      "threadpoolctl": "3.8.0"
+    },
+    "plot_python": "S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv-gpu\\Scripts\\python.exe",
+    "device": "cpu",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD"
+  },
+  "source_sha256": {
+    "src\\run_traditional.py": "7d1165d8b301f6acca67c207f02d33cf06807245974a3a0ef3b65fe06dd2c3ff",
+    "src\\prepare_data.py": "06a5f1104578e427d130b2600b124d7cd805cb2f992497c0e4589bec1b5f3f16",
+    "src\\check_run.py": "163c15bc7998f218fb0292c60932aa468776b149e0b727e030d623539f807e12",
+    "src\\plot_confusion.py": "4665b24e8eb44f6bda17fddb02d08d040a04e9b672d99f85d0b21ff9280f2036",
+    "configs\\traditional_baselines.toml": "bb3c2ccc7ef240bcb860b57d0dad0f17d3c496464380cc2e20180e55620993c9"
+  },
+  "compute_seconds": 0.016398400000298352,
+  "fold_runtime": [
+    {
+      "fold": 1,
+      "training_rows": 2159,
+      "validation_rows": 540,
+      "feature_columns": 1,
+      "feature_seconds": 0.00010620000000471919,
+      "fit_seconds": 0.013511099999959697,
+      "predict_seconds": 6.050000001778244e-05,
+      "warnings": [],
+      "sparse_nonzero_values": null,
+      "iterations": null
+    },
+    {
+      "fold": 2,
+      "training_rows": 2159,
+      "validation_rows": 540,
+      "feature_columns": 1,
+      "feature_seconds": 0.0001318000000765096,
+      "fit_seconds": 0.00040640000008806965,
+      "predict_seconds": 3.9500000070802344e-05,
+      "warnings": [],
+      "sparse_nonzero_values": null,
+      "iterations": null
+    },
+    {
+      "fold": 3,
+      "training_rows": 2159,
+      "validation_rows": 540,
+      "feature_columns": 1,
+      "feature_seconds": 0.00018890000001192675,
+      "fit_seconds": 0.0004073000000062166,
+      "predict_seconds": 4.109999997581326e-05,
+      "warnings": [],
+      "sparse_nonzero_values": null,
+      "iterations": null
+    },
+    {
+      "fold": 4,
+      "training_rows": 2159,
+      "validation_rows": 540,
+      "feature_columns": 1,
+      "feature_seconds": 0.00013099999989663047,
+      "fit_seconds": 0.0005845000000590517,
+      "predict_seconds": 0.000145800000041163,
+      "warnings": [],
+      "sparse_nonzero_values": null,
+      "iterations": null
+    },
+    {
+      "fold": 5,
+      "training_rows": 2160,
+      "validation_rows": 539,
+      "feature_columns": 1,
+      "feature_seconds": 0.00012170000002242887,
+      "fit_seconds": 0.00044439999999212887,
+      "predict_seconds": 7.820000007541239e-05,
+      "warnings": [],
+      "sparse_nonzero_values": null,
+      "iterations": null
+    }
+  ],
+  "exit_code": 1,
+  "error": "常量预测未复现 18 类理论 BA。",
+  "ended_at_utc": "2026-11-24T06:06:49+00:00",
+  "elapsed_seconds": 0.38895179999997254
+}

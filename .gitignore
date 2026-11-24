@@ -1,0 +1,6 @@
+/.venv/
+/.venv-gpu/
+__pycache__/
+/data/cache/
+/data/external/ntl_open_pool.parquet
+/runs/*/checkpoints/

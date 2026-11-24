@@ -1,0 +1,182 @@
+{
+  "id": "E002-style-lr",
+  "kind": "grouped_oof",
+  "status": "completed",
+  "baseline_run": "E001-most-frequent-r3",
+  "protocol_id": "prompt-group-5fold-v1",
+  "train_sha256": "40a22ce8d88c5f46feb4637a099db815bef5f713ffe53e89dbe1b7b21de77707",
+  "folds_sha256": "9e5e0f3db0a359bf314f904862a22d70db92b27c1d91eeb414d8b554e3556af7",
+  "train_file": "S:\\coding_relative\\kaggle\\name-that-llm-local\\data\\official\\train.csv",
+  "started_at_utc": "2026-11-24T06:10:28+00:00",
+  "command": [
+    "S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    ".\\src\\run_traditional.py",
+    "E002-style-lr"
+  ],
+  "working_directory": "S:\\coding_relative\\kaggle_handed",
+  "question": "标点、长度和句子统计在未见题上有多少区分能力？",
+  "config": {
+    "experiment": {
+      "title": "统计风格 + 逻辑回归",
+      "features": "style",
+      "classifier": "logistic",
+      "baseline": "E001-most-frequent-r3",
+      "question": "标点、长度和句子统计在未见题上有多少区分能力？"
+    },
+    "vectorizer": {},
+    "estimator": {
+      "solver": "lbfgs",
+      "l1_ratio": 0.0,
+      "C": 2.0,
+      "max_iter": 2000,
+      "tol": 0.0001,
+      "class_weight": null
+    },
+    "cpu_threads": 4,
+    "style_columns": [
+      "characters",
+      "words",
+      "mean_word_length",
+      "unique_word_fraction",
+      "sentences",
+      "mean_words_per_sentence",
+      "std_words_per_sentence",
+      "comma_per_100_chars",
+      "period_per_100_chars",
+      "colon_per_100_chars",
+      "semicolon_per_100_chars",
+      "em_dash_per_100_chars",
+      "hyphen_per_100_chars",
+      "question_per_100_chars",
+      "exclamation_per_100_chars",
+      "curly_quotes_per_100_chars",
+      "straight_quotes_per_100_chars",
+      "parentheses_per_100_chars",
+      "uppercase_per_100_chars",
+      "digits_per_100_chars"
+    ]
+  },
+  "label_order": [
+    "claude-fable-5",
+    "claude-opus-4-6",
+    "claude-opus-4-8",
+    "claude-opus-5",
+    "claude-sonnet-5",
+    "gemini-3.1-pro-preview",
+    "gemini-3.6-flash",
+    "gemini-3.7-flash",
+    "gemini-3.8-flash",
+    "glm-5.3",
+    "glm-5.3-flash",
+    "gpt-5.5",
+    "gpt-5.6-luna",
+    "gpt-5.6-sol",
+    "gpt-5.6-terra",
+    "gpt-6-astra",
+    "kimi-k3",
+    "qwen3.8-max"
+  ],
+  "decision_rule": "probability argmax, first label in frozen order if tied",
+  "environment": {
+    "python": "3.11.15",
+    "executable": "S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv\\Scripts\\python.exe",
+    "packages": {
+      "numpy": "2.4.6",
+      "pandas": "3.1.1",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.9.1",
+      "pyarrow": "26.0.1",
+      "threadpoolctl": "3.8.0"
+    },
+    "plot_python": "S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv-gpu\\Scripts\\python.exe",
+    "device": "cpu",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD"
+  },
+  "source_sha256": {
+    "src\\run_traditional.py": "57fff49eee6d4a9e320a2a5f2d46d52360393622e84c597c4c24cd61c3ee7c9a",
+    "src\\prepare_data.py": "06a5f1104578e427d130b2600b124d7cd805cb2f992497c0e4589bec1b5f3f16",
+    "src\\check_run.py": "163c15bc7998f218fb0292c60932aa468776b149e0b727e030d623539f807e12",
+    "src\\plot_confusion.py": "4665b24e8eb44f6bda17fddb02d08d040a04e9b672d99f85d0b21ff9280f2036",
+    "configs\\traditional_baselines.toml": "da39f45837ea27db125d610576c01e1cc7e8af98272d609a761883c43e984715"
+  },
+  "compute_seconds": 2.3607195999993564,
+  "fold_runtime": [
+    {
+      "fold": 1,
+      "training_rows": 2159,
+      "validation_rows": 540,
+      "feature_columns": 20,
+      "feature_seconds": 0.3755543999998281,
+      "fit_seconds": 0.09452299999998104,
+      "predict_seconds": 0.0007147999999688182,
+      "warnings": [],
+      "sparse_nonzero_values": null,
+      "iterations": [
+        65
+      ]
+    },
+    {
+      "fold": 2,
+      "training_rows": 2159,
+      "validation_rows": 540,
+      "feature_columns": 20,
+      "feature_seconds": 0.388574300000073,
+      "fit_seconds": 0.0831570999998803,
+      "predict_seconds": 0.0004690999999183987,
+      "warnings": [],
+      "sparse_nonzero_values": null,
+      "iterations": [
+        70
+      ]
+    },
+    {
+      "fold": 3,
+      "training_rows": 2159,
+      "validation_rows": 540,
+      "feature_columns": 20,
+      "feature_seconds": 0.4039560999999594,
+      "fit_seconds": 0.07744159999992917,
+      "predict_seconds": 0.00047160000008261704,
+      "warnings": [],
+      "sparse_nonzero_values": null,
+      "iterations": [
+        64
+      ]
+    },
+    {
+      "fold": 4,
+      "training_rows": 2159,
+      "validation_rows": 540,
+      "feature_columns": 20,
+      "feature_seconds": 0.4071219999998448,
+      "fit_seconds": 0.07016599999997197,
+      "predict_seconds": 0.00046999999995023245,
+      "warnings": [],
+      "sparse_nonzero_values": null,
+      "iterations": [
+        59
+      ]
+    },
+    {
+      "fold": 5,
+      "training_rows": 2160,
+      "validation_rows": 539,
+      "feature_columns": 20,
+      "feature_seconds": 0.3748540999999932,
+      "fit_seconds": 0.08277789999988272,
+      "predict_seconds": 0.00046760000009271607,
+      "warnings": [],
+      "sparse_nonzero_values": null,
+      "iterations": [
+        70
+      ]
+    }
+  ],
+  "exit_code": 0,
+  "verified_oof_rows": 2699,
+  "ended_at_utc": "2026-11-24T06:10:33+00:00",
+  "elapsed_seconds": 5.534627799999953
+}

@@ -1,0 +1,24 @@
+E001-most-frequent-r2  常量预测  prompt-group-5fold-v1
+命令 ["S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv\\Scripts\\python.exe", "-X", "utf8", "-B", ".\\src\\run_traditional.py", "E001-most-frequent-r2"]
+第 1 折  BA 0.055556  特征 1 列  构建 0.00s  拟合 0.01s  预测 0.00s
+第 2 折  BA 0.055556  特征 1 列  构建 0.00s  拟合 0.00s  预测 0.00s
+第 3 折  BA 0.055556  特征 1 列  构建 0.00s  拟合 0.00s  预测 0.00s
+第 4 折  BA 0.055556  特征 1 列  构建 0.00s  拟合 0.00s  预测 0.00s
+第 5 折  BA 0.055556  特征 1 列  构建 0.00s  拟合 0.00s  预测 0.00s
+Traceback (most recent call last):
+  File "S:\coding_relative\kaggle_handed\src\plot_confusion.py", line 3, in <module>
+    import argparse
+  File "C:\Users\35458\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\argparse.py", line 89, in <module>
+    import re as _re
+  File "C:\Users\35458\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\re\__init__.py", line 125, in <module>
+    from . import _compiler, _parser
+  File "C:\Users\35458\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\re\_compiler.py", line 18, in <module>
+    assert _sre.MAGIC == MAGIC, "SRE module mismatch"
+AssertionError: SRE module mismatch
+实验中止
+Traceback (most recent call last):
+  File "S:\coding_relative\kaggle_handed\src\run_traditional.py", line 347, in run_experiment
+    plot.check_returncode()
+  File "C:\Users\35458\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\subprocess.py", line 502, in check_returncode
+    raise CalledProcessError(self.returncode, self.args, self.stdout,
+subprocess.CalledProcessError: Command '['S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv-gpu\\Scripts\\python.exe', '-X', 'utf8', '-B', 'S:\\coding_relative\\kaggle_handed\\src\\plot_confusion.py', 'S:\\coding_relative\\kaggle_handed\\runs\\E001-most-frequent-r2']' returned non-zero exit status 1.

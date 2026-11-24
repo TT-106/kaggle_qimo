@@ -1,0 +1,9 @@
+E001-most-frequent-r3  常量预测  prompt-group-5fold-v1
+命令 ["S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv\\Scripts\\python.exe", "-X", "utf8", "-B", ".\\src\\run_traditional.py", "E001-most-frequent-r3"]
+第 1 折  BA 0.055556  特征 1 列  构建 0.00s  拟合 0.01s  预测 0.00s
+第 2 折  BA 0.055556  特征 1 列  构建 0.00s  拟合 0.00s  预测 0.00s
+第 3 折  BA 0.055556  特征 1 列  构建 0.00s  拟合 0.00s  预测 0.00s
+第 4 折  BA 0.055556  特征 1 列  构建 0.00s  拟合 0.00s  预测 0.00s
+第 5 折  BA 0.055556  特征 1 列  构建 0.00s  拟合 0.00s  预测 0.00s
+S:\coding_relative\kaggle_handed\runs\E001-most-frequent-r3\figures\confusion.png
+E001-most-frequent-r3 已通过归档核验  BA 0.055257  Macro-F1 0.010455  2699 条折外预测

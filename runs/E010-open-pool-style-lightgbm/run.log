@@ -1,0 +1,10 @@
+E010-open-pool-style-lightgbm  统计风格 + LightGBM  open-pool-prompt-group-5fold-v1
+命令 ["S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv\\Scripts\\python.exe", "-X", "utf8", "-B", ".\\src\\run_traditional.py", "--suite", ".\\configs\\open_pool_style.toml", "E008-open-pool-style-lr", "E009-open-pool-style-xgboost", "E010-open-pool-style-lightgbm"]
+共用统计特征 97050 篇，提取耗时 14.82 秒
+第 1 折  BA 0.244869  特征 20 列  构建 0.11s  拟合 8.45s  预测 2.00s
+第 2 折  BA 0.245377  特征 20 列  构建 0.12s  拟合 8.82s  预测 1.54s
+第 3 折  BA 0.239089  特征 20 列  构建 0.15s  拟合 12.06s  预测 2.00s
+第 4 折  BA 0.238208  特征 20 列  构建 0.14s  拟合 9.37s  预测 1.58s
+第 5 折  BA 0.234758  特征 20 列  构建 0.12s  拟合 9.51s  预测 1.61s
+S:\coding_relative\kaggle_handed\runs\E010-open-pool-style-lightgbm\figures\confusion.png
+E010-open-pool-style-lightgbm 已通过归档核验  BA 0.239275  Macro-F1 0.230547  97050 条折外预测

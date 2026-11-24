@@ -1,0 +1,10 @@
+E008-open-pool-style-lr  统计风格 + 逻辑回归  open-pool-prompt-group-5fold-v1
+命令 ["S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv\\Scripts\\python.exe", "-X", "utf8", "-B", ".\\src\\run_traditional.py", "--suite", ".\\configs\\open_pool_style.toml", "E008-open-pool-style-lr", "E009-open-pool-style-xgboost", "E010-open-pool-style-lightgbm"]
+共用统计特征 97050 篇，提取耗时 14.82 秒
+第 1 折  BA 0.212638  特征 20 列  构建 0.18s  拟合 3.46s  预测 0.01s
+第 2 折  BA 0.204000  特征 20 列  构建 0.12s  拟合 3.36s  预测 0.01s
+第 3 折  BA 0.201752  特征 20 列  构建 0.11s  拟合 3.99s  预测 0.01s
+第 4 折  BA 0.201229  特征 20 列  构建 0.13s  拟合 3.83s  预测 0.01s
+第 5 折  BA 0.201547  特征 20 列  构建 0.12s  拟合 3.92s  预测 0.01s
+S:\coding_relative\kaggle_handed\runs\E008-open-pool-style-lr\figures\confusion.png
+E008-open-pool-style-lr 已通过归档核验  BA 0.202834  Macro-F1 0.188888  97050 条折外预测

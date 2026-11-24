@@ -1,0 +1,104 @@
+{
+  "protocol_id": "prompt-group-5fold-v1",
+  "splitter": "GroupKFold",
+  "group_column": "prompt_id",
+  "n_splits": 5,
+  "primary_metric": "balanced_accuracy",
+  "source_train": "S:\\coding_relative\\kaggle\\name-that-llm-local\\data\\official\\train.csv",
+  "train_sha256": "40a22ce8d88c5f46feb4637a099db815bef5f713ffe53e89dbe1b7b21de77707",
+  "folds_sha256": "9e5e0f3db0a359bf314f904862a22d70db92b27c1d91eeb414d8b554e3556af7",
+  "rows": 2699,
+  "prompts": 150,
+  "label_order": [
+    "claude-fable-5",
+    "claude-opus-4-6",
+    "claude-opus-4-8",
+    "claude-opus-5",
+    "claude-sonnet-5",
+    "gemini-3.1-pro-preview",
+    "gemini-3.6-flash",
+    "gemini-3.7-flash",
+    "gemini-3.8-flash",
+    "glm-5.3",
+    "glm-5.3-flash",
+    "gpt-5.5",
+    "gpt-5.6-luna",
+    "gpt-5.6-sol",
+    "gpt-5.6-terra",
+    "gpt-6-astra",
+    "kimi-k3",
+    "qwen3.8-max"
+  ],
+  "class_counts": {
+    "qwen3.8-max": 150,
+    "claude-sonnet-5": 150,
+    "gemini-3.6-flash": 150,
+    "gpt-5.6-terra": 150,
+    "glm-5.3-flash": 150,
+    "gemini-3.1-pro-preview": 150,
+    "gemini-3.8-flash": 150,
+    "claude-opus-4-6": 150,
+    "gpt-5.6-luna": 150,
+    "claude-opus-4-8": 150,
+    "gemini-3.7-flash": 150,
+    "claude-opus-5": 150,
+    "kimi-k3": 150,
+    "gpt-5.5": 150,
+    "gpt-6-astra": 150,
+    "glm-5.3": 150,
+    "gpt-5.6-sol": 150,
+    "claude-fable-5": 149
+  },
+  "fold_checks": [
+    {
+      "fold": 1,
+      "train_rows": 2159,
+      "validation_rows": 540,
+      "train_prompts": 120,
+      "validation_prompts": 30,
+      "validation_classes": 18,
+      "shared_prompts": 0
+    },
+    {
+      "fold": 2,
+      "train_rows": 2159,
+      "validation_rows": 540,
+      "train_prompts": 120,
+      "validation_prompts": 30,
+      "validation_classes": 18,
+      "shared_prompts": 0
+    },
+    {
+      "fold": 3,
+      "train_rows": 2159,
+      "validation_rows": 540,
+      "train_prompts": 120,
+      "validation_prompts": 30,
+      "validation_classes": 18,
+      "shared_prompts": 0
+    },
+    {
+      "fold": 4,
+      "train_rows": 2159,
+      "validation_rows": 540,
+      "train_prompts": 120,
+      "validation_prompts": 30,
+      "validation_classes": 18,
+      "shared_prompts": 0
+    },
+    {
+      "fold": 5,
+      "train_rows": 2160,
+      "validation_rows": 539,
+      "train_prompts": 120,
+      "validation_prompts": 30,
+      "validation_classes": 18,
+      "shared_prompts": 0
+    }
+  ],
+  "environment": {
+    "python": "3.11.15",
+    "pandas": "3.1.1",
+    "scikit_learn": "1.9.1"
+  }
+}

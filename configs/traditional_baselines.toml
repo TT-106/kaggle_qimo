@@ -1,0 +1,101 @@
+# 第一阶段固定参数与对照关系。
+[cpu]
+threads = 4
+
+[tfidf.common]
+min_df = 2
+max_df = 1.0
+lowercase = false
+use_idf = true
+smooth_idf = true
+sublinear_tf = true
+norm = "l2"
+
+[tfidf.word]
+analyzer = "word"
+ngram_range = [1, 2]
+max_features = 25000
+token_pattern = '(?u)\b\w+\b'
+
+[tfidf.char]
+analyzer = "char"
+ngram_range = [3, 5]
+max_features = 80000
+
+[logistic]
+solver = "lbfgs"
+l1_ratio = 0.0
+C = 2.0
+max_iter = 2000
+tol = 0.0001
+
+[tree.common]
+n_estimators = 250
+learning_rate = 0.05
+max_depth = 3
+subsample = 0.85
+colsample_bytree = 0.85
+reg_lambda = 2.0
+random_state = 42
+
+[tree.xgboost]
+objective = "multi:softprob"
+tree_method = "hist"
+min_child_weight = 3
+device = "cpu"
+
+[tree.lightgbm]
+objective = "multiclass"
+num_leaves = 7
+min_child_samples = 25
+subsample_freq = 1
+verbosity = -1
+
+[runs.E001-most-frequent-r3]
+retry_of = "E001-most-frequent-r2"
+title = "常量预测"
+features = "constant"
+classifier = "dummy"
+question = "固定五折和 18 类 BA 能否复现多数类常量预测的理论值？"
+
+[runs.E002-style-lr]
+title = "统计风格 + 逻辑回归"
+features = "style"
+classifier = "logistic"
+baseline = "E001-most-frequent-r3"
+question = "标点、长度和句子统计在未见题上有多少区分能力？"
+
+[runs.E003-word-tfidf-lr]
+title = "词级 TF-IDF + 逻辑回归"
+features = "word"
+classifier = "logistic"
+baseline = "E002-style-lr"
+question = "同一分类器改用词与短语频率之后，整体效果和错误结构怎样变化？"
+
+[runs.E004-char-tfidf-lr]
+title = "字符 TF-IDF + 逻辑回归"
+features = "char"
+classifier = "logistic"
+baseline = "E003-word-tfidf-lr"
+question = "字符片段能否提供比词和短语更有效的归因信号？"
+
+[runs.E005-char-style-lr]
+title = "字符 TF-IDF + 统计风格 + 逻辑回归"
+features = "char_style"
+classifier = "logistic"
+baseline = "E004-char-tfidf-lr"
+question = "在字符 TF-IDF 上增加 20 个显式统计特征，能否改善逐篇归因？"
+
+[runs.E006-style-xgboost]
+title = "统计风格 + XGBoost"
+features = "style"
+classifier = "xgboost"
+baseline = "E002-style-lr"
+question = "在同样 20 项统计特征上，XGBoost 的浅树交互能否改善归因？"
+
+[runs.E007-style-lightgbm]
+title = "统计风格 + LightGBM"
+features = "style"
+classifier = "lightgbm"
+baseline = "E002-style-lr"
+question = "在同样 20 项统计特征上，LightGBM 的效果和成本如何？"

@@ -1,0 +1,9 @@
+E005-char-style-lr  字符 TF-IDF + 统计风格 + 逻辑回归  prompt-group-5fold-v1
+命令 ["S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv\\Scripts\\python.exe", "-X", "utf8", "-B", ".\\src\\run_traditional.py", "E005-char-style-lr"]
+第 1 折  BA 0.335185  特征 80020 列  构建 5.16s  拟合 12.10s  预测 0.01s
+第 2 折  BA 0.307407  特征 80020 列  构建 5.20s  拟合 12.64s  预测 0.02s
+第 3 折  BA 0.333333  特征 80020 列  构建 5.28s  拟合 12.18s  预测 0.01s
+第 4 折  BA 0.333333  特征 80020 列  构建 5.29s  拟合 14.00s  预测 0.02s
+第 5 折  BA 0.296424  特征 80020 列  构建 5.14s  拟合 13.67s  预测 0.02s
+S:\coding_relative\kaggle_handed\runs\E005-char-style-lr\figures\confusion.png
+E005-char-style-lr 已通过归档核验  BA 0.321143  Macro-F1 0.305000  2699 条折外预测

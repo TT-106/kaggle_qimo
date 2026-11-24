@@ -1,0 +1,9 @@
+E006-style-xgboost  统计风格 + XGBoost  prompt-group-5fold-v1
+命令 ["S:\\coding_relative\\kaggle\\name-that-llm-local\\.venv\\Scripts\\python.exe", "-X", "utf8", "-B", ".\\src\\run_traditional.py", "E006-style-xgboost"]
+第 1 折  BA 0.259259  特征 20 列  构建 0.39s  拟合 2.40s  预测 0.02s
+第 2 折  BA 0.220370  特征 20 列  构建 0.36s  拟合 2.49s  预测 0.02s
+第 3 折  BA 0.250000  特征 20 列  构建 0.40s  拟合 2.43s  预测 0.02s
+第 4 折  BA 0.259259  特征 20 列  构建 0.40s  拟合 2.42s  预测 0.02s
+第 5 折  BA 0.239144  特征 20 列  构建 0.41s  拟合 2.33s  预测 0.02s
+S:\coding_relative\kaggle_handed\runs\E006-style-xgboost\figures\confusion.png
+E006-style-xgboost 已通过归档核验  BA 0.245615  Macro-F1 0.240128  2699 条折外预测
